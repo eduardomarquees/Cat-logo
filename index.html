@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Catálogo</title>
+</head>
+<body>
+
+    <header>
+        <h1>Catálogo</h1>
+    </header>
+
+    <div class="catalogo">
+
+        <div class="produto" id="produto1">
+            <img src="fotos/image1.jpeg" alt="Dois pares de brinco">
+            <h2>Dois pares de brinco</h2>
+            <p>Brincos de prata 925</p>
+            <p>R$ 50,00</p>
+            <button onclick="mostrarFormulario('endereco-form', 'Par de Brincos')">Fazer pedido</button>
+        </div>
+
+        <div class="produto" id="produto2">
+            <img src="fotos/image2.jpeg" alt="Anel">
+            <h2>Anel</h2>
+            <p>Prata 925</p>
+            <p>R$ 60,00</p>
+            <button onclick="mostrarFormulario('endereco-form', 'Par de Aneis')">Fazer pedido</button>
+        </div>
+
+        <div class="produto" id="produto3">
+            <img src="fotos/image3.jpeg" alt="Escapulário Nossa senhora">
+            <h2>Escapulário Nossa senhora</h2>
+            <p>Colar de prata 925</p>
+            <p>R$ 70,00</p>
+            <button onclick="mostrarFormulario('endereco-form', 'Escapulário Nossa senhora')">Fazer pedido</button>
+        </div>
+
+        <div class="produto" id="produto4">
+            <img src="fotos/image4.jpeg" alt="Colar terço 45cm">
+            <h2>Colar terço 45cm</h2>
+            <p>Colar de prata 925</p>
+            <p>R$ 70,00</p>
+            <button onclick="mostrarFormulario('endereco-form', 'Colar terço 45cm')">Fazer pedido</button>
+        </div>
+
+        <div class="produto" id="produto5">
+            <img src="fotos/image5.jpeg" alt="Duplo Aneis">
+            <h2>Duplo aneis</h2>
+            <p>Colar de prata 925</p>
+            <p>R$ 70,00</p>
+            <button onclick="mostrarFormulario('endereco-form', 'Duplo Aneis')">Fazer pedido</button>
+        </div>
+
+        <div class="produto" id="produto6">
+            <img src="fotos/image6.jpeg" alt="Aneis de borboleta">
+            <h2>Aneis de borboleta</h2>
+            <p>Colar de prata 925</p>
+            <p>R$ 70,00</p>
+            <button onclick="mostrarFormulario('endereco-form', 'Aneis de borboleta')">Fazer pedido</button>
+        </div>
+
+        <div class="produto" id="produto7">
+            <img src="fotos/image7.jpeg" alt="Anel de corrente">
+            <h2>Anel de corrente</h2>
+            <p>Colar de prata 925</p>
+            <p>R$ 70,00</p>
+            <button onclick="mostrarFormulario('endereco-form', 'Anel de corrente')">Fazer pedido</button>
+        </div>
+
+        <div class="produto" id="produto8">
+            <img src="fotos/image8.jpeg" alt="Par de brincos com joia">
+            <h2>Par de brincos com joia</h2>
+            <p>Colar de prata 925</p>
+            <p>R$ 70,00</p>
+            <button onclick="mostrarFormulario('endereco-form', 'Par de brincos com joia')">Fazer pedido</button>
+        </div>
+
+        <div class="produto" id="produto9">
+            <img src="fotos/image9.jpeg" alt="Colar terço 45cm">
+            <h2>Colar terço 45cm</h2>
+            <p>Colar de prata 925</p>
+            <p>R$ 70,00</p>
+            <button onclick="mostrarFormulario('endereco-form', 'Colar terço 45cm')">Fazer pedido</button>
+        </div>
+
+        <div class="produto" id="produto10">
+            <img src="fotos/image10.jpeg" alt="Colar terço 45cm">
+            <h2>Colar terço 45cm</h2>
+            <p>Colar de prata 925</p>
+            <p>R$ 70,00</p>
+            <button onclick="mostrarFormulario('endereco-form', 'Colar terço 45cm')">Fazer pedido</button>
+        </div>
+
+        <div class="produto" id="produto11">
+            <img src="fotos/image11.jpeg" alt="Colar terço 45cm">
+            <h2>Colar terço 45cm</h2>
+            <p>Colar de prata 925</p>
+            <p>R$ 70,00</p>
+            <button onclick="mostrarFormulario('endereco-form', 'Colar terço 45cm')">Fazer pedido</button>
+        </div>
+
+        <div class="produto" id="produto12">
+            <img src="fotos/image12.jpeg" alt="Colar terço 45cm">
+            <h2>Colar terço 45cm</h2>
+            <p>Colar de prata 925</p>
+            <p>R$ 70,00</p>
+            <button onclick="mostrarFormulario('endereco-form', 'Colar terço 45cm')">Fazer pedido</button>
+        </div>
+
+    </div>
+
+    <div id="endereco-form" class="endereco-form">
+        <h2>Preencha o formulário de endereço</h2>
+        <form id="formularioEndereco">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" required>
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" required>
+
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" required>
+
+            <button type="button" onclick="enviarPedido()">Enviar Pedido</button>
+        </form>
+    </div>
+
+    <script>
+        function mostrarFormulario(formularioId, produto) {
+            var todosFormularios = document.querySelectorAll('.endereco-form');
+            todosFormularios.forEach(function(formulario) {
+                formulario.style.display = 'none';
+            });
+
+            var formularioAtual = document.getElementById(formularioId);
+            formularioAtual.style.display = 'block';
+            formularioAtual.dataset.produto = produto; // Armazena o produto no atributo 'data-produto'
+        }
+
+        function enviarPedido() {
+            var formEndereco = document.getElementById('formularioEndereco');
+            var nome = formEndereco.elements['nome'].value;
+            var endereco = formEndereco.elements['endereco'].value;
+            var cidade = formEndereco.elements['cidade'].value;
+            var cep = formEndereco.elements['cep'].value;
+
+            var produto = document.getElementById('endereco-form').dataset.produto; // Obtém o produto do atributo 'data-produto'
+
+            // Aqui você pode fazer algo com os dados do endereço (por exemplo, enviar para um servidor)
+
+            // Após processar o endereço, você pode redirecionar para o WhatsApp ou realizar outras ações
+            var mensagem = nome + " encomendou " + produto + " para o Endereço: " + endereco + ", " + cidade + ", CEP: " + cep;
+            var linkWhatsapp = "https://api.whatsapp.com/send?phone=&text=" + encodeURIComponent(mensagem);
+
+            window.location.href = linkWhatsapp;
+        }
+    </script>
+
+</body>
+</html>
